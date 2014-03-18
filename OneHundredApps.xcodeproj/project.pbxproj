@@ -14,13 +14,16 @@
 		8559AEBA18D8C75B00BE3B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEB918D8C75B00BE3B97 /* main.m */; };
 		8559AEBE18D8C75B00BE3B97 /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */; };
 		8559AEC118D8C75B00BE3B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8559AEBF18D8C75B00BE3B97 /* Main.storyboard */; };
-		8559AEC418D8C75B00BE3B97 /* MBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEC318D8C75B00BE3B97 /* MBViewController.m */; };
+		8559AEC418D8C75B00BE3B97 /* MBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEC318D8C75B00BE3B97 /* MBMainViewController.m */; };
 		8559AEC618D8C75B00BE3B97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8559AEC518D8C75B00BE3B97 /* Images.xcassets */; };
 		8559AECD18D8C75B00BE3B97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AECC18D8C75B00BE3B97 /* XCTest.framework */; };
 		8559AECE18D8C75B00BE3B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AEAD18D8C75B00BE3B97 /* Foundation.framework */; };
 		8559AECF18D8C75B00BE3B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AEB118D8C75B00BE3B97 /* UIKit.framework */; };
 		8559AED718D8C75B00BE3B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8559AED518D8C75B00BE3B97 /* InfoPlist.strings */; };
 		8559AED918D8C75B00BE3B97 /* OneHundredAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AED818D8C75B00BE3B97 /* OneHundredAppsTests.m */; };
+		8559AEE418D8C8BF00BE3B97 /* MBApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE318D8C8BF00BE3B97 /* MBApplicationCell.m */; };
+		8559AEE718D8CB2000BE3B97 /* MBApplicationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */; };
+		8559AEEA18D8CD8D00BE3B97 /* MBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE918D8CD8D00BE3B97 /* MBApplication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +48,20 @@
 		8559AEBC18D8C75B00BE3B97 /* MBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
 		8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
 		8559AEC018D8C75B00BE3B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8559AEC218D8C75B00BE3B97 /* MBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBViewController.h; sourceTree = "<group>"; };
-		8559AEC318D8C75B00BE3B97 /* MBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBViewController.m; sourceTree = "<group>"; };
+		8559AEC218D8C75B00BE3B97 /* MBMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBMainViewController.h; sourceTree = "<group>"; };
+		8559AEC318D8C75B00BE3B97 /* MBMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBMainViewController.m; sourceTree = "<group>"; };
 		8559AEC518D8C75B00BE3B97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8559AECB18D8C75B00BE3B97 /* OneHundredAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneHundredAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8559AECC18D8C75B00BE3B97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8559AED418D8C75B00BE3B97 /* OneHundredAppsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHundredAppsTests-Info.plist"; sourceTree = "<group>"; };
 		8559AED618D8C75B00BE3B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8559AED818D8C75B00BE3B97 /* OneHundredAppsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHundredAppsTests.m; sourceTree = "<group>"; };
+		8559AEE218D8C8BF00BE3B97 /* MBApplicationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplicationCell.h; sourceTree = "<group>"; };
+		8559AEE318D8C8BF00BE3B97 /* MBApplicationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplicationCell.m; sourceTree = "<group>"; };
+		8559AEE518D8CB2000BE3B97 /* MBApplicationsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplicationsProvider.h; sourceTree = "<group>"; };
+		8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplicationsProvider.m; sourceTree = "<group>"; };
+		8559AEE818D8CD8D00BE3B97 /* MBApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplication.h; sourceTree = "<group>"; };
+		8559AEE918D8CD8D00BE3B97 /* MBApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +124,14 @@
 				8559AEBC18D8C75B00BE3B97 /* MBAppDelegate.h */,
 				8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */,
 				8559AEBF18D8C75B00BE3B97 /* Main.storyboard */,
-				8559AEC218D8C75B00BE3B97 /* MBViewController.h */,
-				8559AEC318D8C75B00BE3B97 /* MBViewController.m */,
+				8559AEC218D8C75B00BE3B97 /* MBMainViewController.h */,
+				8559AEC318D8C75B00BE3B97 /* MBMainViewController.m */,
+				8559AEE218D8C8BF00BE3B97 /* MBApplicationCell.h */,
+				8559AEE318D8C8BF00BE3B97 /* MBApplicationCell.m */,
+				8559AEE518D8CB2000BE3B97 /* MBApplicationsProvider.h */,
+				8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */,
+				8559AEE818D8CD8D00BE3B97 /* MBApplication.h */,
+				8559AEE918D8CD8D00BE3B97 /* MBApplication.m */,
 				8559AEC518D8C75B00BE3B97 /* Images.xcassets */,
 				8559AEB418D8C75B00BE3B97 /* Supporting Files */,
 			);
@@ -251,8 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8559AEBA18D8C75B00BE3B97 /* main.m in Sources */,
-				8559AEC418D8C75B00BE3B97 /* MBViewController.m in Sources */,
+				8559AEE418D8C8BF00BE3B97 /* MBApplicationCell.m in Sources */,
+				8559AEC418D8C75B00BE3B97 /* MBMainViewController.m in Sources */,
+				8559AEE718D8CB2000BE3B97 /* MBApplicationsProvider.m in Sources */,
 				8559AEBE18D8C75B00BE3B97 /* MBAppDelegate.m in Sources */,
+				8559AEEA18D8CD8D00BE3B97 /* MBApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

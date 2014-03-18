@@ -1,5 +1,5 @@
 //
-//  MBViewController.h
+//  MBMainViewController.h
 //  OneHundredApps
 //
 //  Created by Michal Banasiak on 18.03.2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MBViewController : UIViewController
+@interface MBMainViewController : UITableViewController
 
 @end
