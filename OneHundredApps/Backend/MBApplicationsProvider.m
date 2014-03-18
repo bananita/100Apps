@@ -19,6 +19,7 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
     Reachability* reachability;
     
     BOOL connectionAvailable;
+    NSInteger taskCounter;
 }
 
 @end
@@ -88,6 +89,7 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
                                 failBlock:(void(^)())fail
 {
     [self showNoConnectionAlertIfNeeded];
+    [self incrementTaskCounter];
     
     NSURL *url = [NSURL URLWithString:kMBAppleFeedURL];
     
@@ -169,6 +171,8 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
         fetchedApplications = fetchResults;
 
         success();
+        
+        [self decrementTaskCounter];
     });
 }
 
@@ -190,6 +194,8 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
 {
     MBApplication* application = fetchedApplications[index];
     [taskOwner.task cancel];
+    
+    [self incrementTaskCounter];
 
     NSURLSessionTask* task = [session dataTaskWithURL:[NSURL URLWithString:application.imageURL]
                                     completionHandler:^(NSData *data,
@@ -198,13 +204,33 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
         UIImage *downloadedImage = [UIImage imageWithData:data];
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            completionBlock(downloadedImage);
+            if (!error)
+                completionBlock(downloadedImage);
+            
+            [self decrementTaskCounter];
         });
     }];
     
     [task resume];
     
     taskOwner.task = task;
+}
+
+- (void)incrementTaskCounter
+{
+    taskCounter++;
+    [self updateInternetConnectionIndicator];
+}
+
+- (void)decrementTaskCounter
+{
+    taskCounter--;
+    [self updateInternetConnectionIndicator];
+}
+
+- (void)updateInternetConnectionIndicator
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = taskCounter > 0;
 }
 
 @end
