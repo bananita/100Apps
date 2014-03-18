@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MBTaskOwner.h"
 
 @interface MBApplicationsProvider : NSObject
 
@@ -19,6 +20,7 @@
 - (NSString*)nameOfApplicationAtIndex:(NSInteger)index;
 
 - (void)fetchImageForApplicationAtIndex:(NSInteger)index
-                        completionBlock:(void(^)(UIImage* image))completionBlock;
+                        completionBlock:(void(^)(UIImage* image))completionBlock
+                              taskOwner:(id<MBTaskOwner>)taskOwner;
 
 @end

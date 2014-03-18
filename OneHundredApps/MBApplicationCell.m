@@ -9,11 +9,14 @@
 #import "MBApplicationCell.h"
 
 @implementation MBApplicationCell
+@synthesize task = _task;
+
 
 - (void)dealloc {
     [_ranking release];
     [_image release];
     [_name release];
+    [_task release];
 
     [super dealloc];
 }

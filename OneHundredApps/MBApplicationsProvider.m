@@ -96,13 +96,28 @@
 {
     MBApplication* application = fetchedApplications[index];
     
-    return [application.name autorelease];
+    return application.name;
 }
 
 - (void)fetchImageForApplicationAtIndex:(NSInteger)index
                         completionBlock:(void(^)(UIImage* image))completionBlock
+                              taskOwner:(id<MBTaskOwner>)taskOwner
 {
+    MBApplication* application = fetchedApplications[index];
+    [taskOwner.task cancel];
     
+    NSURLSessionTask* task = [session dataTaskWithURL:[NSURL URLWithString:application.imageURL]
+                                    completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        UIImage *downloadedImage = [UIImage imageWithData:data];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionBlock(downloadedImage);
+        });
+    }];
+    
+    [task resume];
+    
+    taskOwner.task = task;
 }
 
 @end

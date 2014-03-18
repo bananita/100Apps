@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBTaskOwner.h"
 
-@interface MBApplicationCell : UITableViewCell
+@interface MBApplicationCell : UITableViewCell <MBTaskOwner>
 
 @property (retain, nonatomic) IBOutlet UILabel* ranking;
 @property (retain, nonatomic) IBOutlet UIImageView* image;

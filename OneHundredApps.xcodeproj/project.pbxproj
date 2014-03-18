@@ -62,6 +62,7 @@
 		8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplicationsProvider.m; sourceTree = "<group>"; };
 		8559AEE818D8CD8D00BE3B97 /* MBApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplication.h; sourceTree = "<group>"; };
 		8559AEE918D8CD8D00BE3B97 /* MBApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplication.m; sourceTree = "<group>"; };
+		8559AEEB18D8D98000BE3B97 /* MBTaskOwner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTaskOwner.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 				8559AEE918D8CD8D00BE3B97 /* MBApplication.m */,
 				8559AEC518D8C75B00BE3B97 /* Images.xcassets */,
 				8559AEB418D8C75B00BE3B97 /* Supporting Files */,
+				8559AEEB18D8D98000BE3B97 /* MBTaskOwner.h */,
 			);
 			path = OneHundredApps;
 			sourceTree = "<group>";

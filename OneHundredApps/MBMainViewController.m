@@ -86,10 +86,11 @@
     
     cell.ranking.text = [NSString stringWithFormat:@"%ld", (long)index+1];
     cell.name.text = [applicationsProvider nameOfApplicationAtIndex:index];
+    cell.image.image = nil;
     
     [applicationsProvider fetchImageForApplicationAtIndex:index completionBlock:^(UIImage *image) {
         cell.image.image = image;
-    }];
+    } taskOwner:cell];
     
     return cell;
 }
