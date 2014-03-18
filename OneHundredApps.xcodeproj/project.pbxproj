@@ -24,6 +24,7 @@
 		8559AEE418D8C8BF00BE3B97 /* MBApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE318D8C8BF00BE3B97 /* MBApplicationCell.m */; };
 		8559AEE718D8CB2000BE3B97 /* MBApplicationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */; };
 		8559AEEA18D8CD8D00BE3B97 /* MBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE918D8CD8D00BE3B97 /* MBApplication.m */; };
+		8559AEEE18D8F99F00BE3B97 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEED18D8F99F00BE3B97 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		8559AEE818D8CD8D00BE3B97 /* MBApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplication.h; sourceTree = "<group>"; };
 		8559AEE918D8CD8D00BE3B97 /* MBApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplication.m; sourceTree = "<group>"; };
 		8559AEEB18D8D98000BE3B97 /* MBTaskOwner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTaskOwner.h; sourceTree = "<group>"; };
+		8559AEEC18D8F99F00BE3B97 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8559AEED18D8F99F00BE3B97 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 		8559AEB318D8C75B00BE3B97 /* OneHundredApps */ = {
 			isa = PBXGroup;
 			children = (
+				8559AEEC18D8F99F00BE3B97 /* Reachability.h */,
+				8559AEED18D8F99F00BE3B97 /* Reachability.m */,
 				8559AEBC18D8C75B00BE3B97 /* MBAppDelegate.h */,
 				8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */,
 				8559AEBF18D8C75B00BE3B97 /* Main.storyboard */,
@@ -270,6 +275,7 @@
 				8559AEBA18D8C75B00BE3B97 /* main.m in Sources */,
 				8559AEE418D8C8BF00BE3B97 /* MBApplicationCell.m in Sources */,
 				8559AEC418D8C75B00BE3B97 /* MBMainViewController.m in Sources */,
+				8559AEEE18D8F99F00BE3B97 /* Reachability.m in Sources */,
 				8559AEE718D8CB2000BE3B97 /* MBApplicationsProvider.m in Sources */,
 				8559AEBE18D8C75B00BE3B97 /* MBAppDelegate.m in Sources */,
 				8559AEEA18D8CD8D00BE3B97 /* MBApplication.m in Sources */,

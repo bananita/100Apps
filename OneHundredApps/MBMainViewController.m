@@ -83,11 +83,11 @@
         [self.tableView reloadData];
         self.navigationItem.rightBarButtonItem = refreshButton;
     } failBlock:^{
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Downloading error alert title")
+        UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Downloading error alert title")
                                                         message:NSLocalizedString(@"Error during downloading apps. Please try again later.", @"Downloading error alert message")
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
-                                              otherButtonTitles: nil];
+                                              otherButtonTitles: nil] autorelease];
         
         [alert show];
     }];

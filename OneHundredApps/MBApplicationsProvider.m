@@ -8,6 +8,7 @@
 
 #import "MBApplicationsProvider.h"
 #import "MBApplication.h"
+#import "Reachability.h"
 
 static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidapplications/limit=100/json";
 
@@ -15,6 +16,9 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
 {
     NSURLSession* session;
     NSArray* fetchedApplications;
+    Reachability* reachability;
+    
+    BOOL connectionAvailable;
 }
 
 @end
@@ -30,6 +34,9 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
     
     session = [aSession retain];
     
+    [self startInternetAccessMonitoring];
+
+    
     return self;
 }
 
@@ -38,12 +45,50 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
     [session release];
     [fetchedApplications release];
     
+    [self stopInternetAccessMonitoring];
+    
     [super dealloc];
+}
+
+- (void)startInternetAccessMonitoring
+{
+    reachability = [[Reachability reachabilityForInternetConnection] retain];
+    [reachability startNotifier];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    [self refreshConnectionStatus];
+}
+
+- (void)stopInternetAccessMonitoring
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kReachabilityChangedNotification
+                                                  object:nil];
+    
+    [reachability stopNotifier];
+    [reachability release];
+    reachability = nil;
+}
+
+- (void)reachabilityChanged:(NSNotification*)notification
+{
+    [self refreshConnectionStatus];
+}
+
+- (void)refreshConnectionStatus
+{
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    connectionAvailable = (networkStatus != NotReachable);
 }
 
 - (void)fetchApplicationsWithSuccessBlock:(void(^)())success
                                 failBlock:(void(^)())fail
 {
+    [self showNoConnectionAlertIfNeeded];
+    
     NSURL *url = [NSURL URLWithString:kMBAppleFeedURL];
     
     NSURLSessionDataTask *dataTask =
@@ -59,6 +104,19 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
            }];
     
     [dataTask resume];
+}
+
+- (void)showNoConnectionAlertIfNeeded
+{
+    if (connectionAvailable)
+        return;
+    
+    UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No internet connection", @"No internet connection alert title")
+                                                     message:NSLocalizedString(@"Internet connection is unavailable." , @"No internet connection alert message")
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles: nil] autorelease];
+    [alert show];
 }
 
 - (void)processResponseWithData:(NSData*)data
