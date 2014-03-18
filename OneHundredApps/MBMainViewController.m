@@ -28,6 +28,8 @@
     [refreshButton release];
     [refreshIndicator release];
     
+    [self unregisterDynamicFontNotification];
+    
     [super dealloc];
 }
 
@@ -35,6 +37,7 @@
 {
     [self createRefreshIndicator];
     [self createApplicationsProvider];
+    [self registerForDynamicFontNotification];
     
     [self fetchApplications];
 }
@@ -50,6 +53,21 @@
 {
     NSURLSession* session = [NSURLSession sharedSession];
     applicationsProvider = [[MBApplicationsProvider alloc] initWithURLSession:session];
+}
+
+- (void)registerForDynamicFontNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didChangePreferredContentSize:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+}
+
+- (void)unregisterDynamicFontNotification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
 }
 
 - (IBAction)refresh:(id)sender
@@ -100,7 +118,15 @@
                                               cell.image.image = image;
                                           }];
     
+    cell.name.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    cell.ranking.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    
     return cell;
+}
+
+- (void)didChangePreferredContentSize:(NSNotification*)notification
+{
+    [self.tableView reloadData];
 }
 
 @end
