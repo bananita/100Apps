@@ -20,21 +20,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-zD-NtL">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-zD-NtL">
                                             <rect key="frame" x="20" y="34" width="29" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62J-Vh-WDb">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="62J-Vh-WDb">
                                             <rect key="frame" x="57" y="19" width="51" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="51" id="BaY-bE-ACZ"/>
+                                                <constraint firstAttribute="width" constant="51" id="AFL-el-bNS"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="184" translatesAutoresizingMaskIntoConstraints="NO" id="men-h3-nym">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="184" translatesAutoresizingMaskIntoConstraints="NO" id="men-h3-nym">
                                             <rect key="frame" x="116" y="19" width="184" height="51"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -42,15 +42,17 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="top" secondItem="VgW-UH-O8g" secondAttribute="top" constant="19" id="4Zn-az-Gvd"/>
+                                        <constraint firstAttribute="trailing" secondItem="men-h3-nym" secondAttribute="trailing" constant="20" symbolic="YES" id="21Q-39-zx3"/>
+                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="leading" secondItem="VgW-UH-O8g" secondAttribute="leading" constant="57" id="3tW-Ve-yuf"/>
                                         <constraint firstItem="Z30-zD-NtL" firstAttribute="leading" secondItem="VgW-UH-O8g" secondAttribute="leading" constant="20" symbolic="YES" id="7Hg-VP-a5l"/>
-                                        <constraint firstAttribute="trailing" secondItem="men-h3-nym" secondAttribute="trailing" constant="20" id="8kP-27-Edc"/>
-                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="leading" secondItem="VgW-UH-O8g" secondAttribute="leading" constant="57" id="KrO-5F-qQ9"/>
-                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="bottom" secondItem="men-h3-nym" secondAttribute="bottom" id="PuE-iU-EKl"/>
+                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="bottom" secondItem="men-h3-nym" secondAttribute="bottom" id="9jO-UG-upT"/>
+                                        <constraint firstItem="men-h3-nym" firstAttribute="leading" secondItem="62J-Vh-WDb" secondAttribute="trailing" constant="8" symbolic="YES" id="H8O-RX-Feg"/>
+                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="top" secondItem="VgW-UH-O8g" secondAttribute="top" constant="19" id="RpF-Sn-fIY"/>
+                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="centerY" secondItem="Z30-zD-NtL" secondAttribute="centerY" id="Rrc-Qj-qOI"/>
                                         <constraint firstItem="Z30-zD-NtL" firstAttribute="top" secondItem="VgW-UH-O8g" secondAttribute="top" constant="34" id="Wq0-vC-vDQ"/>
-                                        <constraint firstItem="men-h3-nym" firstAttribute="leading" secondItem="62J-Vh-WDb" secondAttribute="trailing" constant="8" symbolic="YES" id="poa-di-aW4"/>
-                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="centerY" secondItem="Z30-zD-NtL" secondAttribute="centerY" id="uvc-wX-pDc"/>
-                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="top" secondItem="men-h3-nym" secondAttribute="top" id="yfo-EZ-r93"/>
+                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="leading" secondItem="Z30-zD-NtL" secondAttribute="trailing" constant="8" symbolic="YES" id="d4X-fM-yiY"/>
+                                        <constraint firstItem="62J-Vh-WDb" firstAttribute="top" secondItem="men-h3-nym" secondAttribute="top" id="jIx-Dk-X27"/>
+                                        <constraint firstAttribute="bottom" secondItem="men-h3-nym" secondAttribute="bottom" constant="20" symbolic="YES" id="vvg-7r-C6Y"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
