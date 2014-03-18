@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8559AEA918D8C75B00BE3B97"
-               BuildableName = "OneHundredApps.app"
-               BlueprintName = "OneHundredApps"
+               BuildableName = "100Apps.app"
+               BlueprintName = "100Apps"
                ReferencedContainer = "container:OneHundredApps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8559AEA918D8C75B00BE3B97"
-            BuildableName = "OneHundredApps.app"
-            BlueprintName = "OneHundredApps"
+            BuildableName = "100Apps.app"
+            BlueprintName = "100Apps"
             ReferencedContainer = "container:OneHundredApps.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8559AEA918D8C75B00BE3B97"
-            BuildableName = "OneHundredApps.app"
-            BlueprintName = "OneHundredApps"
+            BuildableName = "100Apps.app"
+            BlueprintName = "100Apps"
             ReferencedContainer = "container:OneHundredApps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8559AEA918D8C75B00BE3B97"
-            BuildableName = "OneHundredApps.app"
-            BlueprintName = "OneHundredApps"
+            BuildableName = "100Apps.app"
+            BlueprintName = "100Apps"
             ReferencedContainer = "container:OneHundredApps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

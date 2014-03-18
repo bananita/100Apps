@@ -15,27 +15,12 @@
 		8559AEBE18D8C75B00BE3B97 /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */; };
 		8559AEC118D8C75B00BE3B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8559AEBF18D8C75B00BE3B97 /* Main.storyboard */; };
 		8559AEC618D8C75B00BE3B97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8559AEC518D8C75B00BE3B97 /* Images.xcassets */; };
-		8559AECD18D8C75B00BE3B97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AECC18D8C75B00BE3B97 /* XCTest.framework */; };
-		8559AECE18D8C75B00BE3B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AEAD18D8C75B00BE3B97 /* Foundation.framework */; };
-		8559AECF18D8C75B00BE3B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AEB118D8C75B00BE3B97 /* UIKit.framework */; };
-		8559AED718D8C75B00BE3B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8559AED518D8C75B00BE3B97 /* InfoPlist.strings */; };
-		8559AED918D8C75B00BE3B97 /* OneHundredAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AED818D8C75B00BE3B97 /* OneHundredAppsTests.m */; };
 		8559AEF718D8FEA300BE3B97 /* MBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEF318D8FEA300BE3B97 /* MBApplication.m */; };
 		8559AEF818D8FEA300BE3B97 /* MBApplicationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEF518D8FEA300BE3B97 /* MBApplicationsProvider.m */; };
 		8559AEFB18D8FEA900BE3B97 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEFA18D8FEA900BE3B97 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		8559AF0018D8FEB100BE3B97 /* MBApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEFD18D8FEB100BE3B97 /* MBApplicationCell.m */; };
 		8559AF0118D8FEB100BE3B97 /* MBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEFF18D8FEB100BE3B97 /* MBMainViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8559AED018D8C75B00BE3B97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8559AEA218D8C75B00BE3B97 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8559AEA918D8C75B00BE3B97;
-			remoteInfo = OneHundredApps;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8559AEAA18D8C75B00BE3B97 /* OneHundredApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHundredApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,11 +35,7 @@
 		8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
 		8559AEC018D8C75B00BE3B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8559AEC518D8C75B00BE3B97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8559AECB18D8C75B00BE3B97 /* OneHundredAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneHundredAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8559AECC18D8C75B00BE3B97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8559AED418D8C75B00BE3B97 /* OneHundredAppsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHundredAppsTests-Info.plist"; sourceTree = "<group>"; };
-		8559AED618D8C75B00BE3B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8559AED818D8C75B00BE3B97 /* OneHundredAppsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHundredAppsTests.m; sourceTree = "<group>"; };
 		8559AEF218D8FEA300BE3B97 /* MBApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBApplication.h; path = Backend/MBApplication.h; sourceTree = "<group>"; };
 		8559AEF318D8FEA300BE3B97 /* MBApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBApplication.m; path = Backend/MBApplication.m; sourceTree = "<group>"; };
 		8559AEF418D8FEA300BE3B97 /* MBApplicationsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBApplicationsProvider.h; path = Backend/MBApplicationsProvider.h; sourceTree = "<group>"; };
@@ -79,16 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8559AEC818D8C75B00BE3B97 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8559AECD18D8C75B00BE3B97 /* XCTest.framework in Frameworks */,
-				8559AECF18D8C75B00BE3B97 /* UIKit.framework in Frameworks */,
-				8559AECE18D8C75B00BE3B97 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				8559AEB318D8C75B00BE3B97 /* OneHundredApps */,
-				8559AED218D8C75B00BE3B97 /* OneHundredAppsTests */,
 				8559AEAC18D8C75B00BE3B97 /* Frameworks */,
 				8559AEAB18D8C75B00BE3B97 /* Products */,
 			);
@@ -106,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				8559AEAA18D8C75B00BE3B97 /* OneHundredApps.app */,
-				8559AECB18D8C75B00BE3B97 /* OneHundredAppsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,9 +94,9 @@
 		8559AEB318D8C75B00BE3B97 /* OneHundredApps */ = {
 			isa = PBXGroup;
 			children = (
+				8559AEEF18D8FE1100BE3B97 /* MainViewController */,
 				8559AEF118D8FE2D00BE3B97 /* Backend */,
 				8559AEF018D8FE2100BE3B97 /* Libraries */,
-				8559AEEF18D8FE1100BE3B97 /* MainViewController */,
 				8559AEBF18D8C75B00BE3B97 /* Main.storyboard */,
 				8559AEC518D8C75B00BE3B97 /* Images.xcassets */,
 				8559AEB418D8C75B00BE3B97 /* Supporting Files */,
@@ -144,24 +113,6 @@
 				8559AEB618D8C75B00BE3B97 /* InfoPlist.strings */,
 				8559AEB918D8C75B00BE3B97 /* main.m */,
 				8559AEBB18D8C75B00BE3B97 /* OneHundredApps-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8559AED218D8C75B00BE3B97 /* OneHundredAppsTests */ = {
-			isa = PBXGroup;
-			children = (
-				8559AED818D8C75B00BE3B97 /* OneHundredAppsTests.m */,
-				8559AED318D8C75B00BE3B97 /* Supporting Files */,
-			);
-			path = OneHundredAppsTests;
-			sourceTree = "<group>";
-		};
-		8559AED318D8C75B00BE3B97 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8559AED418D8C75B00BE3B97 /* OneHundredAppsTests-Info.plist */,
-				8559AED518D8C75B00BE3B97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -201,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8559AEA918D8C75B00BE3B97 /* OneHundredApps */ = {
+		8559AEA918D8C75B00BE3B97 /* 100Apps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8559AEDC18D8C75B00BE3B97 /* Build configuration list for PBXNativeTarget "OneHundredApps" */;
+			buildConfigurationList = 8559AEDC18D8C75B00BE3B97 /* Build configuration list for PBXNativeTarget "100Apps" */;
 			buildPhases = (
 				8559AEA618D8C75B00BE3B97 /* Sources */,
 				8559AEA718D8C75B00BE3B97 /* Frameworks */,
@@ -213,28 +164,10 @@
 			);
 			dependencies = (
 			);
-			name = OneHundredApps;
+			name = 100Apps;
 			productName = OneHundredApps;
 			productReference = 8559AEAA18D8C75B00BE3B97 /* OneHundredApps.app */;
 			productType = "com.apple.product-type.application";
-		};
-		8559AECA18D8C75B00BE3B97 /* OneHundredAppsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8559AEDF18D8C75B00BE3B97 /* Build configuration list for PBXNativeTarget "OneHundredAppsTests" */;
-			buildPhases = (
-				8559AEC718D8C75B00BE3B97 /* Sources */,
-				8559AEC818D8C75B00BE3B97 /* Frameworks */,
-				8559AEC918D8C75B00BE3B97 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8559AED118D8C75B00BE3B97 /* PBXTargetDependency */,
-			);
-			name = OneHundredAppsTests;
-			productName = OneHundredAppsTests;
-			productReference = 8559AECB18D8C75B00BE3B97 /* OneHundredAppsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -245,11 +178,6 @@
 				CLASSPREFIX = MB;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "SO MANY APPS";
-				TargetAttributes = {
-					8559AECA18D8C75B00BE3B97 = {
-						TestTargetID = 8559AEA918D8C75B00BE3B97;
-					};
-				};
 			};
 			buildConfigurationList = 8559AEA518D8C75B00BE3B97 /* Build configuration list for PBXProject "OneHundredApps" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -264,8 +192,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8559AEA918D8C75B00BE3B97 /* OneHundredApps */,
-				8559AECA18D8C75B00BE3B97 /* OneHundredAppsTests */,
+				8559AEA918D8C75B00BE3B97 /* 100Apps */,
 			);
 		};
 /* End PBXProject section */
@@ -278,14 +205,6 @@
 				8559AEC618D8C75B00BE3B97 /* Images.xcassets in Resources */,
 				8559AEB818D8C75B00BE3B97 /* InfoPlist.strings in Resources */,
 				8559AEC118D8C75B00BE3B97 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8559AEC918D8C75B00BE3B97 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8559AED718D8C75B00BE3B97 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,23 +225,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8559AEC718D8C75B00BE3B97 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8559AED918D8C75B00BE3B97 /* OneHundredAppsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8559AED118D8C75B00BE3B97 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8559AEA918D8C75B00BE3B97 /* OneHundredApps */;
-			targetProxy = 8559AED018D8C75B00BE3B97 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8559AEB618D8C75B00BE3B97 /* InfoPlist.strings */ = {
@@ -339,14 +242,6 @@
 				8559AEC018D8C75B00BE3B97 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8559AED518D8C75B00BE3B97 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8559AED618D8C75B00BE3B97 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -384,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -416,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -450,46 +345,6 @@
 			};
 			name = Release;
 		};
-		8559AEE018D8C75B00BE3B97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OneHundredApps.app/OneHundredApps";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OneHundredApps/OneHundredApps-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "OneHundredAppsTests/OneHundredAppsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		8559AEE118D8C75B00BE3B97 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OneHundredApps.app/OneHundredApps";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OneHundredApps/OneHundredApps-Prefix.pch";
-				INFOPLIST_FILE = "OneHundredAppsTests/OneHundredAppsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -502,19 +357,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8559AEDC18D8C75B00BE3B97 /* Build configuration list for PBXNativeTarget "OneHundredApps" */ = {
+		8559AEDC18D8C75B00BE3B97 /* Build configuration list for PBXNativeTarget "100Apps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8559AEDD18D8C75B00BE3B97 /* Debug */,
 				8559AEDE18D8C75B00BE3B97 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		8559AEDF18D8C75B00BE3B97 /* Build configuration list for PBXNativeTarget "OneHundredAppsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8559AEE018D8C75B00BE3B97 /* Debug */,
-				8559AEE118D8C75B00BE3B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
