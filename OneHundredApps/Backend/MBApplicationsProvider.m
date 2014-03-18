@@ -87,8 +87,13 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
 
 - (void)fetchApplicationsWithSuccessBlock:(void(^)())success
                                 failBlock:(void(^)())fail
+                        noConnectionBlock:(void(^)())noConnection;
 {
-    [self showNoConnectionAlertIfNeeded];
+    if (!connectionAvailable) {
+        noConnection();
+        return;
+    }
+    
     [self incrementTaskCounter];
     
     NSURL *url = [NSURL URLWithString:kMBAppleFeedURL];
@@ -106,19 +111,6 @@ static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidappl
            }];
     
     [dataTask resume];
-}
-
-- (void)showNoConnectionAlertIfNeeded
-{
-    if (connectionAvailable)
-        return;
-    
-    UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No internet connection", @"No internet connection alert title")
-                                                     message:NSLocalizedString(@"Internet connection is unavailable." , @"No internet connection alert message")
-                                                    delegate:nil
-                                           cancelButtonTitle:@"OK"
-                                           otherButtonTitles: nil] autorelease];
-    [alert show];
 }
 
 - (void)processResponseWithData:(NSData*)data

@@ -14,7 +14,8 @@
 - (id)initWithURLSession:(NSURLSession*)aSession;
 
 - (void)fetchApplicationsWithSuccessBlock:(void(^)())success
-                                failBlock:(void(^)())fail;
+                                failBlock:(void(^)())fail
+                        noConnectionBlock:(void(^)())noConnection;
 
 - (NSInteger)numberOfFetchedApplications;
 - (NSString*)nameOfApplicationAtIndex:(NSInteger)index;

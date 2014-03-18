@@ -77,11 +77,12 @@
 
 - (void)fetchApplications
 {
-    self.navigationItem.rightBarButtonItem = refreshIndicator;
+    [self setRefreshIndicatorVisible:YES];
     
     [applicationsProvider fetchApplicationsWithSuccessBlock:^{
         [self.tableView reloadData];
-        self.navigationItem.rightBarButtonItem = refreshButton;
+        
+        [self setRefreshIndicatorVisible:NO];
     } failBlock:^{
         UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Downloading error alert title")
                                                         message:NSLocalizedString(@"Error during downloading apps. Please try again later.", @"Downloading error alert message")
@@ -90,7 +91,24 @@
                                               otherButtonTitles: nil] autorelease];
         
         [alert show];
+        
+        [self setRefreshIndicatorVisible:NO];
+    } noConnectionBlock:^{
+        UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No internet connection", @"No internet connection alert title")
+                                                         message:NSLocalizedString(@"Internet connection is unavailable." , @"No internet connection alert message")
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles: nil] autorelease];
+        [alert show];
+        
+        [self setRefreshIndicatorVisible:NO];
     }];
+}
+
+- (void)setRefreshIndicatorVisible:(BOOL)visible
+{
+    id barButtonItem = visible? refreshIndicator : refreshButton;
+    self.navigationItem.rightBarButtonItem = barButtonItem;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
