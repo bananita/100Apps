@@ -14,17 +14,17 @@
 		8559AEBA18D8C75B00BE3B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEB918D8C75B00BE3B97 /* main.m */; };
 		8559AEBE18D8C75B00BE3B97 /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */; };
 		8559AEC118D8C75B00BE3B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8559AEBF18D8C75B00BE3B97 /* Main.storyboard */; };
-		8559AEC418D8C75B00BE3B97 /* MBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEC318D8C75B00BE3B97 /* MBMainViewController.m */; };
 		8559AEC618D8C75B00BE3B97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8559AEC518D8C75B00BE3B97 /* Images.xcassets */; };
 		8559AECD18D8C75B00BE3B97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AECC18D8C75B00BE3B97 /* XCTest.framework */; };
 		8559AECE18D8C75B00BE3B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AEAD18D8C75B00BE3B97 /* Foundation.framework */; };
 		8559AECF18D8C75B00BE3B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559AEB118D8C75B00BE3B97 /* UIKit.framework */; };
 		8559AED718D8C75B00BE3B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8559AED518D8C75B00BE3B97 /* InfoPlist.strings */; };
 		8559AED918D8C75B00BE3B97 /* OneHundredAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AED818D8C75B00BE3B97 /* OneHundredAppsTests.m */; };
-		8559AEE418D8C8BF00BE3B97 /* MBApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE318D8C8BF00BE3B97 /* MBApplicationCell.m */; };
-		8559AEE718D8CB2000BE3B97 /* MBApplicationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */; };
-		8559AEEA18D8CD8D00BE3B97 /* MBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEE918D8CD8D00BE3B97 /* MBApplication.m */; };
-		8559AEEE18D8F99F00BE3B97 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEED18D8F99F00BE3B97 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		8559AEF718D8FEA300BE3B97 /* MBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEF318D8FEA300BE3B97 /* MBApplication.m */; };
+		8559AEF818D8FEA300BE3B97 /* MBApplicationsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEF518D8FEA300BE3B97 /* MBApplicationsProvider.m */; };
+		8559AEFB18D8FEA900BE3B97 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEFA18D8FEA900BE3B97 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		8559AF0018D8FEB100BE3B97 /* MBApplicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEFD18D8FEB100BE3B97 /* MBApplicationCell.m */; };
+		8559AF0118D8FEB100BE3B97 /* MBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559AEFF18D8FEB100BE3B97 /* MBMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,23 +49,23 @@
 		8559AEBC18D8C75B00BE3B97 /* MBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
 		8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
 		8559AEC018D8C75B00BE3B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8559AEC218D8C75B00BE3B97 /* MBMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBMainViewController.h; sourceTree = "<group>"; };
-		8559AEC318D8C75B00BE3B97 /* MBMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBMainViewController.m; sourceTree = "<group>"; };
 		8559AEC518D8C75B00BE3B97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8559AECB18D8C75B00BE3B97 /* OneHundredAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneHundredAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8559AECC18D8C75B00BE3B97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8559AED418D8C75B00BE3B97 /* OneHundredAppsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHundredAppsTests-Info.plist"; sourceTree = "<group>"; };
 		8559AED618D8C75B00BE3B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8559AED818D8C75B00BE3B97 /* OneHundredAppsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHundredAppsTests.m; sourceTree = "<group>"; };
-		8559AEE218D8C8BF00BE3B97 /* MBApplicationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplicationCell.h; sourceTree = "<group>"; };
-		8559AEE318D8C8BF00BE3B97 /* MBApplicationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplicationCell.m; sourceTree = "<group>"; };
-		8559AEE518D8CB2000BE3B97 /* MBApplicationsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplicationsProvider.h; sourceTree = "<group>"; };
-		8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplicationsProvider.m; sourceTree = "<group>"; };
-		8559AEE818D8CD8D00BE3B97 /* MBApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBApplication.h; sourceTree = "<group>"; };
-		8559AEE918D8CD8D00BE3B97 /* MBApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApplication.m; sourceTree = "<group>"; };
-		8559AEEB18D8D98000BE3B97 /* MBTaskOwner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTaskOwner.h; sourceTree = "<group>"; };
-		8559AEEC18D8F99F00BE3B97 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		8559AEED18D8F99F00BE3B97 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8559AEF218D8FEA300BE3B97 /* MBApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBApplication.h; path = Backend/MBApplication.h; sourceTree = "<group>"; };
+		8559AEF318D8FEA300BE3B97 /* MBApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBApplication.m; path = Backend/MBApplication.m; sourceTree = "<group>"; };
+		8559AEF418D8FEA300BE3B97 /* MBApplicationsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBApplicationsProvider.h; path = Backend/MBApplicationsProvider.h; sourceTree = "<group>"; };
+		8559AEF518D8FEA300BE3B97 /* MBApplicationsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBApplicationsProvider.m; path = Backend/MBApplicationsProvider.m; sourceTree = "<group>"; };
+		8559AEF618D8FEA300BE3B97 /* MBTaskOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBTaskOwner.h; path = Backend/MBTaskOwner.h; sourceTree = "<group>"; };
+		8559AEF918D8FEA900BE3B97 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Libraries/Reachability.h; sourceTree = "<group>"; };
+		8559AEFA18D8FEA900BE3B97 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Libraries/Reachability.m; sourceTree = "<group>"; };
+		8559AEFC18D8FEB100BE3B97 /* MBApplicationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBApplicationCell.h; path = MainViewController/MBApplicationCell.h; sourceTree = "<group>"; };
+		8559AEFD18D8FEB100BE3B97 /* MBApplicationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBApplicationCell.m; path = MainViewController/MBApplicationCell.m; sourceTree = "<group>"; };
+		8559AEFE18D8FEB100BE3B97 /* MBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBMainViewController.h; path = MainViewController/MBMainViewController.h; sourceTree = "<group>"; };
+		8559AEFF18D8FEB100BE3B97 /* MBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBMainViewController.m; path = MainViewController/MBMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,20 +125,10 @@
 		8559AEB318D8C75B00BE3B97 /* OneHundredApps */ = {
 			isa = PBXGroup;
 			children = (
-				8559AEEC18D8F99F00BE3B97 /* Reachability.h */,
-				8559AEED18D8F99F00BE3B97 /* Reachability.m */,
-				8559AEBC18D8C75B00BE3B97 /* MBAppDelegate.h */,
-				8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */,
+				8559AEF118D8FE2D00BE3B97 /* Backend */,
+				8559AEF018D8FE2100BE3B97 /* Libraries */,
+				8559AEEF18D8FE1100BE3B97 /* MainViewController */,
 				8559AEBF18D8C75B00BE3B97 /* Main.storyboard */,
-				8559AEC218D8C75B00BE3B97 /* MBMainViewController.h */,
-				8559AEC318D8C75B00BE3B97 /* MBMainViewController.m */,
-				8559AEE218D8C8BF00BE3B97 /* MBApplicationCell.h */,
-				8559AEE318D8C8BF00BE3B97 /* MBApplicationCell.m */,
-				8559AEE518D8CB2000BE3B97 /* MBApplicationsProvider.h */,
-				8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */,
-				8559AEE818D8CD8D00BE3B97 /* MBApplication.h */,
-				8559AEE918D8CD8D00BE3B97 /* MBApplication.m */,
-				8559AEEB18D8D98000BE3B97 /* MBTaskOwner.h */,
 				8559AEC518D8C75B00BE3B97 /* Images.xcassets */,
 				8559AEB418D8C75B00BE3B97 /* Supporting Files */,
 			);
@@ -148,6 +138,8 @@
 		8559AEB418D8C75B00BE3B97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8559AEBC18D8C75B00BE3B97 /* MBAppDelegate.h */,
+				8559AEBD18D8C75B00BE3B97 /* MBAppDelegate.m */,
 				8559AEB518D8C75B00BE3B97 /* OneHundredApps-Info.plist */,
 				8559AEB618D8C75B00BE3B97 /* InfoPlist.strings */,
 				8559AEB918D8C75B00BE3B97 /* main.m */,
@@ -172,6 +164,38 @@
 				8559AED518D8C75B00BE3B97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8559AEEF18D8FE1100BE3B97 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8559AEFC18D8FEB100BE3B97 /* MBApplicationCell.h */,
+				8559AEFD18D8FEB100BE3B97 /* MBApplicationCell.m */,
+				8559AEFE18D8FEB100BE3B97 /* MBMainViewController.h */,
+				8559AEFF18D8FEB100BE3B97 /* MBMainViewController.m */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		8559AEF018D8FE2100BE3B97 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8559AEF918D8FEA900BE3B97 /* Reachability.h */,
+				8559AEFA18D8FEA900BE3B97 /* Reachability.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		8559AEF118D8FE2D00BE3B97 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				8559AEF218D8FEA300BE3B97 /* MBApplication.h */,
+				8559AEF318D8FEA300BE3B97 /* MBApplication.m */,
+				8559AEF418D8FEA300BE3B97 /* MBApplicationsProvider.h */,
+				8559AEF518D8FEA300BE3B97 /* MBApplicationsProvider.m */,
+				8559AEF618D8FEA300BE3B97 /* MBTaskOwner.h */,
+			);
+			name = Backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,13 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8559AEF818D8FEA300BE3B97 /* MBApplicationsProvider.m in Sources */,
+				8559AF0118D8FEB100BE3B97 /* MBMainViewController.m in Sources */,
 				8559AEBA18D8C75B00BE3B97 /* main.m in Sources */,
-				8559AEE418D8C8BF00BE3B97 /* MBApplicationCell.m in Sources */,
-				8559AEC418D8C75B00BE3B97 /* MBMainViewController.m in Sources */,
-				8559AEEE18D8F99F00BE3B97 /* Reachability.m in Sources */,
-				8559AEE718D8CB2000BE3B97 /* MBApplicationsProvider.m in Sources */,
 				8559AEBE18D8C75B00BE3B97 /* MBAppDelegate.m in Sources */,
-				8559AEEA18D8CD8D00BE3B97 /* MBApplication.m in Sources */,
+				8559AF0018D8FEB100BE3B97 /* MBApplicationCell.m in Sources */,
+				8559AEF718D8FEA300BE3B97 /* MBApplication.m in Sources */,
+				8559AEFB18D8FEA900BE3B97 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
