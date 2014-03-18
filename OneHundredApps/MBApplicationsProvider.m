@@ -9,13 +9,14 @@
 #import "MBApplicationsProvider.h"
 #import "MBApplication.h"
 
+static NSString* kMBAppleFeedURL = @"https://itunes.apple.com/us/rss/toppaidapplications/limit=100/json";
+
 @interface MBApplicationsProvider ()
 {
     NSURLSession* session;
     NSArray* fetchedApplications;
-    
-    
 }
+
 @end
 
 @implementation MBApplicationsProvider
@@ -35,56 +36,82 @@
 - (void)dealloc
 {
     [session release];
+    [fetchedApplications release];
     
     [super dealloc];
 }
 
 - (void)fetchApplicationsWithSuccessBlock:(void(^)())success
-                                     fail:(void(^)())fail
+                                failBlock:(void(^)())fail
 {
-    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/rss/toppaidapplications/limit=100/json"];
+    NSURL *url = [NSURL URLWithString:kMBAppleFeedURL];
     
     NSURLSessionDataTask *dataTask =
     [session dataTaskWithURL:url
            completionHandler:^(NSData *data,
                                NSURLResponse *response,
                                NSError *error) {
-               if (!error) {
-                   NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
-                   if (httpResp.statusCode == 200) {
-                       
-                       NSError *jsonError = nil;
-                       
-                       NSDictionary *applicationsJSON =
-                       [NSJSONSerialization JSONObjectWithData:data
-                                                       options:NSJSONReadingAllowFragments
-                                                         error:&jsonError];
-                       if (!jsonError) {
-                           NSMutableArray* fetchResults = [NSMutableArray new];
-                           
-                           id applications = applicationsJSON[@"feed"][@"entry"];
-                           
-                           [applications enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                               NSString* name = obj[@"title"][@"label"];
-                               NSString* imageURL = obj[@"im:image"][0][@"label"];
-                               
-                               MBApplication* application = [[MBApplication alloc] initWithName:name imageURL:imageURL];
-                               
-                               [fetchResults addObject:application];
-                           }];
-                           
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               fetchedApplications = [fetchResults copy];
-                               success();
-                               [fetchResults release];
-                           });
-                       }
-                   }
-               }
-               
+               [self processResponseWithData:data
+                                    response:response
+                                       error:error
+                                successBlock:success
+                                   failBlock:fail];
            }];
-
+    
     [dataTask resume];
+}
+
+- (void)processResponseWithData:(NSData*)data
+                       response:(NSURLResponse*)response
+                          error:(NSError*)error
+                   successBlock:(void(^)())success
+                      failBlock:(void(^)())fail
+{
+    
+    if (error) {
+        fail();
+        return;
+    }
+    
+    NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
+    if (httpResp.statusCode != 200) {
+        fail();
+        return;
+    }
+    
+    NSError *jsonError = nil;
+    NSDictionary *applicationsJSON =
+    [NSJSONSerialization JSONObjectWithData:data
+                                    options:NSJSONReadingAllowFragments
+                                      error:&jsonError];
+    
+    if (jsonError) {
+        fail();
+        return;
+    }
+
+    NSMutableArray* fetchResults = [NSMutableArray new];
+    
+    NSArray* applications = applicationsJSON[@"feed"][@"entry"];
+    
+    for (id obj in applications) {
+        NSString* name = obj[@"title"][@"label"];
+        NSString* imageURL = obj[@"im:image"][0][@"label"];
+        
+        MBApplication* application = [[MBApplication alloc] initWithName:name
+                                                                imageURL:imageURL];
+        
+        [fetchResults addObject:application];
+        
+        [application release];
+    }
+
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [fetchedApplications release];
+        fetchedApplications = fetchResults;
+
+        success();
+    });
 }
 
 - (NSInteger)numberOfFetchedApplications
@@ -100,14 +127,16 @@
 }
 
 - (void)fetchImageForApplicationAtIndex:(NSInteger)index
-                        completionBlock:(void(^)(UIImage* image))completionBlock
                               taskOwner:(id<MBTaskOwner>)taskOwner
+                        completionBlock:(void(^)(UIImage* image))completionBlock
 {
     MBApplication* application = fetchedApplications[index];
     [taskOwner.task cancel];
-    
+
     NSURLSessionTask* task = [session dataTaskWithURL:[NSURL URLWithString:application.imageURL]
-                                    completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                    completionHandler:^(NSData *data,
+                                                        NSURLResponse *response,
+                                                        NSError *error) {
         UIImage *downloadedImage = [UIImage imageWithData:data];
 
         dispatch_async(dispatch_get_main_queue(), ^{

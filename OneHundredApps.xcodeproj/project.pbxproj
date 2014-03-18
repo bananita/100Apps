@@ -133,9 +133,9 @@
 				8559AEE618D8CB2000BE3B97 /* MBApplicationsProvider.m */,
 				8559AEE818D8CD8D00BE3B97 /* MBApplication.h */,
 				8559AEE918D8CD8D00BE3B97 /* MBApplication.m */,
+				8559AEEB18D8D98000BE3B97 /* MBTaskOwner.h */,
 				8559AEC518D8C75B00BE3B97 /* Images.xcassets */,
 				8559AEB418D8C75B00BE3B97 /* Supporting Files */,
-				8559AEEB18D8D98000BE3B97 /* MBTaskOwner.h */,
 			);
 			path = OneHundredApps;
 			sourceTree = "<group>";

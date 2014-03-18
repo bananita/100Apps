@@ -13,7 +13,7 @@
 - (id)initWithName:(NSString*)aName
           imageURL:(NSString*)anImageURL;
 
-@property(nonatomic, copy, readonly) NSString* name;
-@property(nonatomic, copy, readonly) NSString* imageURL;
+@property(nonatomic, copy) NSString* name;
+@property(nonatomic, copy) NSString* imageURL;
 
 @end

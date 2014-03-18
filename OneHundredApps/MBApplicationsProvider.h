@@ -14,13 +14,14 @@
 - (id)initWithURLSession:(NSURLSession*)aSession;
 
 - (void)fetchApplicationsWithSuccessBlock:(void(^)())success
-                                     fail:(void(^)())fail;
+                                failBlock:(void(^)())fail;
 
 - (NSInteger)numberOfFetchedApplications;
 - (NSString*)nameOfApplicationAtIndex:(NSInteger)index;
 
 - (void)fetchImageForApplicationAtIndex:(NSInteger)index
-                        completionBlock:(void(^)(UIImage* image))completionBlock
-                              taskOwner:(id<MBTaskOwner>)taskOwner;
+                              taskOwner:(id<MBTaskOwner>)taskOwner
+                        completionBlock:(void(^)(UIImage* image))completionBlock;
+
 
 @end

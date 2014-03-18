@@ -64,8 +64,14 @@
     [applicationsProvider fetchApplicationsWithSuccessBlock:^{
         [self.tableView reloadData];
         self.navigationItem.rightBarButtonItem = refreshButton;
-    } fail:^{
+    } failBlock:^{
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Downloading error alert title")
+                                                        message:NSLocalizedString(@"Error during downloading apps. Please try again later.", @"Downloading error alert message")
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
         
+        [alert show];
     }];
 }
 
@@ -83,14 +89,16 @@
 {
     MBApplicationCell* cell = [tableView dequeueReusableCellWithIdentifier:@"MBApplicationCell"];
     NSInteger index = indexPath.row;
-    
+
     cell.ranking.text = [NSString stringWithFormat:@"%ld", (long)index+1];
     cell.name.text = [applicationsProvider nameOfApplicationAtIndex:index];
     cell.image.image = nil;
     
-    [applicationsProvider fetchImageForApplicationAtIndex:index completionBlock:^(UIImage *image) {
-        cell.image.image = image;
-    } taskOwner:cell];
+    [applicationsProvider fetchImageForApplicationAtIndex:index
+                                                taskOwner:cell
+                                          completionBlock:^(UIImage *image) {
+                                              cell.image.image = image;
+                                          }];
     
     return cell;
 }

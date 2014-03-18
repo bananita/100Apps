@@ -26,8 +26,8 @@
 
 - (void)dealloc
 {
-    [_name dealloc];
-    [_imageURL dealloc];
+    [_name release];
+    [_imageURL release];
     
     [super dealloc];
 }
